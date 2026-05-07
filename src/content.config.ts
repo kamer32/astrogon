@@ -1,9 +1,6 @@
 import { defineCollection, reference, z } from "astro:content";
 import { glob } from "astro/loaders";
 
-// May also need to update /src/types/index.d.ts when updating this file
-// When updating the set of searchable collections, update collectionList in /src/pages/search.astro
-
 const searchable = z.object({
   title: z.string(),
   description: z.string().optional(),
@@ -18,9 +15,6 @@ const social = z.object({
   github: z.string().optional(),
   instagram: z.string().optional(),
   linkedIn: z.string().optional(),
-  pinterest: z.string().optional(),
-  tiktok: z.string().optional(),
-  website: z.string().optional(),
   youtube: z.string().optional(),
 });
 
@@ -92,86 +86,16 @@ const home = defineCollection({
     }),
 });
 
-const indexCards = defineCollection({
-  loader: glob({
-    pattern: "-index.{md,mdx}",
-    base: "./src/content/index-cards",
-  }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    cards: z.array(z.string()),
-  }),
-});
-
-const poetry = defineCollection({
-  loader: glob({ pattern: "**\/[^_]*.{md,mdx}", base: "./src/content/poetry" }),
-  schema: ({ image }) =>
-    searchable.extend({
-      date: z.date().optional(),
-      image: image().optional(),
-      imageAlt: z.string().default(""),
-      author: reference("authors").optional(),
-    }),
-});
-
-const portfolio = defineCollection({
-  loader: glob({
-    pattern: "-index.{md,mdx}",
-    base: "./src/content/portfolio",
-  }),
-  schema: searchable.extend({
-    projects: z.array(
-      z.object({
-        title: z.string(),
-        github: z.string().optional(),
-        technologies: z.array(z.string()).optional(),
-        content: z.array(z.string()).optional(),
-      }),
-    ),
-  }),
-});
-
-const recipes = defineCollection({
-  loader: glob({
-    pattern: "**\/[^_]*.{md,mdx}",
-    base: "./src/content/recipes",
-  }),
-  schema: ({ image }) =>
-    searchable.extend({
-      date: z.date().optional(),
-      image: image().optional(),
-      imageAlt: z.string().default(""),
-      author: reference("authors").optional(),
-      prepTime: z.number().optional(),
-      servings: z.number().optional(),
-      diet: z.string().optional(),
-      ingredients: z
-        .object({
-          list: z.array(z.string()),
-          qty: z.array(z.string()),
-        })
-        .optional(),
-      instructions: z.array(z.string()).optional(),
-      notes: z.array(z.string()).optional(),
-    }),
-});
-
 const terms = defineCollection({
   loader: glob({ pattern: "-index.{md,mdx}", base: "./src/content/terms" }),
   schema: searchable,
 });
 
-// Export collections
 export const collections = {
   about,
   authors,
   blog,
   docs,
   home,
-  indexCards,
-  poetry,
-  portfolio,
-  recipes,
   terms,
 };

@@ -16,3 +16,17 @@
 @layer utilities {
   @include meta.load-css("utilities");
 }
+
+/* --- BEAT TAURUS KAPAK GÖRSELİ (FRONTMATTER) OPTİMİZASYONU --- */
+article > img,
+article > div > img,
+.entry-header img,
+[class*="header"] img {
+  max-height: 450px !important;
+  width: 100% !important;
+  max-width: 800px !important;       /* Resmin yatayda da çok uzamasını engeller */
+  margin: 0 auto 2rem auto !important; /* Ekranın tam ortasına hizalar */
+  border-radius: 12px !important;
+  object-fit: contain !important;    /* Resmin en-boy oranını asla bozmaz, kırpmaz */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}

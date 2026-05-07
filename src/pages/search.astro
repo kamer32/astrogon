@@ -6,13 +6,8 @@ import type { CollectionKey } from "astro:content";
 
 const searchableCollections = [
   "about",
-  "authors",
   "blog",
-  "docs",
-  "poetry",
-  "portfolio",
-  "recipes",
-  "terms",
+  "docs"
 ] as CollectionKey[];
 
 const searchList = (await getEntriesBatch(

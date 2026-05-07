@@ -1,8 +1,19 @@
 ---
-title: Hey, I'm Jane Doe!
-description: this is meta description
-image: "@assets/profile/jane-doe.jpg"
-draft: false
+title: "Basın Kiti (Presskit)"
+image: "@assets/beat-taurus-logo.png"
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+# Beat Taurus Hakkında
+**Beat Taurus**, Taurus Sektörü'nün derinliklerinde geçen, hızlı tempolu bir top-down space shooter oyunudur. 
+
+## Künye
+- **Geliştirici:** [UmbrellaSK]
+- **Platformlar:** Android (Beta), iOS, PC
+- **Tür:** Bullet-hell, Space Shooter
+- **İletişim:** [umbrellask.entertainment@gmail.com]
+
+## Medya Varlıkları (Assets)
+[Beat Taurus Logo ve Ekran Görüntülerini İndir (.zip)](https://netlify-linkin-veya-google-drive-linkin)
+
+## Video
+[YouTube fragman linki]

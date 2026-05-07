@@ -1,11 +1,11 @@
 ---
-title: Jane Doe
-email: janedoe@email.com
+title: UmbrellaSK
+email: umbrellask.entertainment@gmail.com
 image: "@assets/profile/jane-doe.jpg"
 social:
   github: "https://github.com/"
   linkedIn: "https://www.linkedin.com/"
-  email: "janedoe@janedoe.com"
+  email: "umbrellask.entertainment@gmail.com"
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+We are a family in Turkey combining our superpowers and talents for creating awesome games.
