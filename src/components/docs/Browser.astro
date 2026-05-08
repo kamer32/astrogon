@@ -3,33 +3,52 @@ import { ScrollArea } from "@components/common/shortcodes/ScrollArea";
 import type { MenuItem } from "@/types";
 
 interface Props {
-  menu: MenuItem[];
+  menu?: MenuItem[]; // Veri gelmeme ihtimaline karşı opsiyonel yapıldı
   currentPage: string;
 }
 
-const { menu, currentPage } = Astro.props;
+// Varsayılan olarak boş dizi ([]) atandı, böylece .length okuması asla çökmez.
+const { menu = [], currentPage } = Astro.props;
+
+// --- AKILLI LİNK ALGORİTMASI ---
+// CurrentPage verisinden sayfanın Türkçe olup olmadığını anlıyoruz
+const isTurkish = currentPage && currentPage.startsWith("tr/");
+
+// Linkleri klasör ön eklerinden temizleyen güvenli fonksiyon
+function getDocLink(id: string) {
+  // Hem uzantıları (.md) hem de i18n eklerini temizliyoruz
+  let clean = id.replace(/\.mdx?$/, ""); 
+  clean = clean.replace(/^tr\//, "").replace(/^en\//, "");
+  clean = clean.replace(/-index$/, "").replace(/\/$/, "");
+
+  // Anadizindeki docs (/docs) için "/" eklenmesini engelliyoruz
+  if (clean === "") return isTurkish ? `/tr/docs` : `/docs`;
+  
+  return isTurkish ? `/tr/docs/${clean}` : `/docs/${clean}`;
+}
 ---
 
 {
-  menu.length > 0 && (
+  /* menu dizisi varsa VE içi boş değilse render et */
+  menu && menu.length > 0 && (
     <div class="relative glass rounded-lg p-4 my-2 w-full intersect:animate-fadeRight opacity-0">
       <ScrollArea className="h-full" client:only="react">
-        <h2 class="text-2xl border-none">Documents</h2>
+        <h2 class="text-2xl border-none">{isTurkish ? "Dokümanlar" : "Documents"}</h2>
         <ul class="list-none m-0">
           {menu.map((item) => (
             <li class="ml-0">
               <a
-                href={`/docs/${item.id}`}
+                href={getDocLink(item.id)}
                 class={`w-full leading-none no-underline ${item.id === currentPage ? "font-bold" : ""}`}
               >
                 {item.title}
               </a>
-              {item.children.length > 0 && (
+              {item.children && item.children.length > 0 && (
                 <ul class="list-none m-0">
                   {item.children.map((child) => (
                     <li class="ml-4">
                       <a
-                        href={`/docs/${child.id}`}
+                        href={getDocLink(child.id)}
                         class={`w-full leading-none no-underline ${child.id === currentPage ? "font-bold" : ""}`}
                       >
                         {child.title}

@@ -25,19 +25,13 @@ const pageCount: number = Math.ceil(
 );
 
 export async function getStaticPaths() {
-  const entries = (await getEntries("blog", sortByDate)) as BlogEntry[];
-  // divisor below must equal entriesPerPage
-  const pageCount = Math.ceil(entries.length / 4);
-  const paths = [];
-
-  for (let i = 1; i < pageCount; i++) {
-    paths.push({
-      params: {
-        slug: (i + 1).toString(),
-      },
-    });
-  }
-  return paths;
+  const allEntries = await getEntries("blog");
+  const englishEntries = allEntries.filter(entry => entry.id.startsWith("en/"));
+  
+  return englishEntries.map((entry) => ({
+    params: { slug: entry.id.replace("en/", "") }, // 'en/' ön ekini URL'den temizler
+    props: { entry },
+  }));
 }
 ---
 

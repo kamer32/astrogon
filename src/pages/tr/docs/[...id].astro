@@ -7,25 +7,27 @@ import type { DocsEntry } from "@/types";
 export async function getStaticPaths() {
   const allEntries = (await getEntries("docs")) as DocsEntry[];
   
-  const enEntries = allEntries.filter(entry => {
+  const trEntries = allEntries.filter(entry => {
     const id = entry.slug || entry.id || "";
-    return id.startsWith("en/");
+    return id.startsWith("tr/");
   });
 
-  return enEntries.map(entry => {
+  return trEntries.map(entry => {
     const rawId = entry.slug || entry.id || "";
-    let route = rawId.replace(/^en\//, "").replace(/\.mdx?$/, "");
+    let route = rawId.replace(/^tr\//, "").replace(/\.mdx?$/, "");
     
+    // Klasör (Grup) tespiti
     const isGroup = route.endsWith("-index");
     if (isGroup) {
       route = route.replace(/-index$/, "");
     }
     if (route.endsWith("/")) route = route.slice(0, -1);
 
+    // EĞER KLASÖR İSE: İçindeki alt dosyaları (Taurus Protokolü vb.) kartlar için topla
     let children: DocsEntry[] = [];
     if (isGroup) {
       const folderPrefix = rawId.split("-index")[0];
-      children = enEntries.filter(e => {
+      children = trEntries.filter(e => {
         const childId = e.slug || e.id || "";
         return childId.startsWith(folderPrefix) && childId !== rawId;
       });
@@ -33,7 +35,7 @@ export async function getStaticPaths() {
 
     return {
       params: { id: route || undefined },
-      props: { entry, isGroup, children }
+      props: { entry, isGroup, children } // Veriyi JSX tarafına aktarıyoruz
     };
   });
 }
@@ -43,8 +45,10 @@ const { entry, isGroup, children } = Astro.props;
 
 {
   isGroup ? (
+    /* Klasörse: Alt dosyaları Kart olarak listele */
     <CollectionLayout entries={children} collectionIndex={entry} />
   ) : (
+    /* Değilse: Lore içeriğini okuma sayfası olarak aç */
     <EntryLayout entry={entry} browserMenu={[]} />
   )
 }

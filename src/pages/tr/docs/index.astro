@@ -7,9 +7,8 @@ import { sortByTitle } from "@lib/sortFunctions";
 const collectionIndex = (await getIndex("docs")) as DocsEntry;
 const allEntries = (await getEntries("docs", sortByTitle)) as DocsEntry[];
 
-// İNGİLİZCE FİLTRESİ VE ALT KLASÖR BYPASS
-// getGroups yerine tüm dosyaları çekip, '-index' olanları kendimiz filtreliyoruz.
-const groupIndices = allEntries.filter(entry => entry.id.startsWith("en/") && entry.id.includes("-index"));
+// TÜRKÇE FİLTRESİ VE ALT KLASÖR BYPASS
+const groupIndices = allEntries.filter(entry => entry.id.startsWith("tr/") && entry.id.includes("-index"));
 ---
 
 <CollectionLayout entries={groupIndices} collectionIndex={collectionIndex} />

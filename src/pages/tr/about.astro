@@ -3,6 +3,6 @@ import { getCollection } from "astro:content";
 import EntryLayout from "@components/about/EntryLayout.astro";
 
 const allAbout = await getCollection("about");
-const entry = allAbout.find((e) => e.id === "en") || allAbout.find((e) => e.id === "en/index");
+const entry = allAbout.find((e) => e.id === "tr") || allAbout.find((e) => e.id === "tr/index");
 ---
 <EntryLayout entry={entry} />

@@ -32,12 +32,26 @@ const entryReadingTime = readingTime(entry.body!, complexity);
 const entryDescription =
   description ||
   (autodescription ? plainify(entry.body!.slice(0, descriptionLength)) : null);
+
+// --- AKILLI LİNK (SMART ROUTING) ALGORİTMASI ---
+const isTurkish = entry.id.startsWith("tr/");
+
+// 1. Ana Yazı Linkini Formatla
+let targetUrl = `/blog/${entry.id}`;
+if (isTurkish) {
+  targetUrl = `/tr/blog/${entry.id.replace("tr/", "")}`;
+} else if (entry.id.startsWith("en/")) {
+  targetUrl = `/blog/${entry.id.replace("en/", "")}`;
+}
+
+// 2. Kategori Linklerini Formatla
+const categoryBaseUrl = isTurkish ? "/tr/blog/categories" : "/blog/categories";
 ---
 
 <div class="h-full m-2 pl-0 bg-gradient-to-br gradient rounded-lg">
   <div class="glass h-full rounded-lg p-4 intersect:animate-fadeUp opacity-0">
     <h4 class="mb-2">
-      <a href={`/blog/${entry.id}`}>
+      <a href={targetUrl}>
         {title}
       </a>
     </h4>
@@ -46,7 +60,7 @@ const entryDescription =
         categories && (
           <li class="mr-0 inline-block">
             {categories.map((category: string, index: number) => (
-              <a href={`/blog/categories/${slugify(category)}`}>
+              <a href={`${categoryBaseUrl}/${slugify(category)}`}>
                 <FaRegFolder className={"ml-2 -mt-1 inline-block"} />
                 {upperHumanize(category)}
               </a>
@@ -54,18 +68,6 @@ const entryDescription =
           </li>
         )
       }
-      <!-- { tags && (
-        <li class="mr-0 inline-block">
-          {
-            tags.map((tag: string, index: number) => (
-              <a href={`/blog/tags/${slugify(tag)}`}>
-                <FaHashtag className={"ml-2 -mt-1 inline-block"} />
-                {lowerHumanize(tag)}
-              </a>
-            ))
-          }
-        </li>
-      )} -->
       {
         entryDate && (
           <li class="mr-0 inline-block">

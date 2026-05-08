@@ -8,16 +8,14 @@ import similerItems from "@lib/similarItems";
 export async function getStaticPaths() {
   const allEntries = (await getEntries("blog", sortByDate)) as BlogEntry[];
   
-  // İNGİLİZCE FİLTRESİ: Sadece 'en/' klasöründekileri al
-  const entries = allEntries.filter(entry => entry.id.startsWith("en/"));
+  // TÜRKÇE FİLTRESİ: Sadece 'tr/' klasöründekileri al
+  const entries = allEntries.filter(entry => entry.id.startsWith("tr/"));
   
   const paths = entries.map((entry) => ({
     params: {
-      // URL'nin bozulmaması için 'en/' ön ekini siliyoruz
-      entry: entry.id.replace("en/", ""),
+      // URL'nin bozulmaması için 'tr/' ön ekini siliyoruz
+      entry: entry.id.replace("tr/", ""),
     },
-    // relatedEntries (Benzer yazılar) kısmında Türkçe yazıların çıkmaması için
-    // filtrelenmiş 'entries' listesini prop olarak gönderiyoruz.
     props: { entry, entries },
   }));
   return paths;

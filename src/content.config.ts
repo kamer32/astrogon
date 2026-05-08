@@ -19,7 +19,7 @@ const social = z.object({
 });
 
 const about = defineCollection({
-  loader: glob({ pattern: "-index.{md,mdx}", base: "./src/content/about" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/about" }),
   schema: ({ image }) =>
     searchable.extend({
       image: image().optional(),
@@ -70,7 +70,7 @@ const docs = defineCollection({
 });
 
 const home = defineCollection({
-  loader: glob({ pattern: "-index.{md,mdx}", base: "./src/content/home" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/home" }),
   schema: ({ image }) =>
     z.object({
       image: image().optional(),

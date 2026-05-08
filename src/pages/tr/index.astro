@@ -4,7 +4,7 @@ import EntryLayout from "@components/home/EntryLayout.astro";
 
 const allHome = await getCollection("home");
 
-// Verilere göre tam ID eşleşmesi (en) kullanılmalı.
-const entry = allHome.find((e) => e.id === "en") || allHome.find((e) => e.id === "en/index");
+// Verilere göre tam ID eşleşmesi (tr) kullanılmalı.
+const entry = allHome.find((e) => e.id === "tr") || allHome.find((e) => e.id === "tr/index");
 ---
 <EntryLayout entry={entry} />
