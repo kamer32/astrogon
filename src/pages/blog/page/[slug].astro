@@ -5,11 +5,30 @@ import { sortByDate } from "@lib/sortFunctions";
 import CollectionLayout from "@components/blog/CollectionLayout.astro";
 import type { BlogEntry } from "@/types";
 
+export async function getStaticPaths() {
+  const allEntries = (await getEntries("blog", sortByDate)) as BlogEntry[];
+  
+  // 1. TÜRKÇE ZIRHI: Sadece Türkçe verileri al
+  const entries = allEntries.filter(entry => entry.id.startsWith("en/"));
+  
+  // 2. SAYFA NUMARASI HESAPLAMA: Toplam veriyi sayfa başı limite böl
+  const entriesPerPage = 4;
+  const pageCount = Math.ceil(entries.length / entriesPerPage);
+  
+  // 3. ROTA ÜRETİMİ: 1, 2, 3 gibi sayfa numaraları oluştur
+  return Array.from({ length: pageCount }).map((_, i) => ({
+    params: { slug: String(i + 1) },
+  }));
+}
+
 const { slug } = Astro.params;
 const currentPageIndex = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
 
 const entryIndex = (await getIndex("blog")) as BlogEntry;
-const entries = (await getEntries("blog", sortByDate)) as BlogEntry[];
+const allEntries = (await getEntries("blog", sortByDate)) as BlogEntry[];
+
+// İÇERİK FİLTRESİ: Ekrana basılacak Türkçe veriler
+const entries = allEntries.filter(entry => entry.id.startsWith("en/"));
 
 const allCategories = await getTaxaMultiset("blog", "categories");
 const categories = await getTaxa("blog", "categories");
@@ -20,19 +39,7 @@ const indexOfLastEntry = currentPageIndex * entriesPerPage;
 const indexOfFirstEntry = indexOfLastEntry - entriesPerPage;
 const currentEntries = entries.slice(indexOfFirstEntry, indexOfLastEntry);
 
-const pageCount: number = Math.ceil(
-  entries.length / entriesPerPage
-);
-
-export async function getStaticPaths() {
-  const allEntries = await getEntries("blog");
-  const englishEntries = allEntries.filter(entry => entry.id.startsWith("en/"));
-  
-  return englishEntries.map((entry) => ({
-    params: { slug: entry.id.replace("en/", "") }, // 'en/' ön ekini URL'den temizler
-    props: { entry },
-  }));
-}
+const pageCount: number = Math.ceil(entries.length / entriesPerPage);
 ---
 
 <CollectionLayout

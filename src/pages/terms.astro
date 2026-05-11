@@ -1,9 +1,13 @@
 ---
 import EntryLayout from "@components/terms/EntryLayout.astro";
-import { getIndex } from "@lib/contentParser";
+import { getCollection } from "astro:content";
 import type { TermsEntry } from "@/types";
 
-const entry = await getIndex("terms") as TermsEntry;
+const allEntries = await getCollection("terms");
+
+
+// Sadece İngilizce (en-index) dosyasını çekiyoruz
+const entry = allEntries.find(e => e.id === "en-index");
 ---
 
 <EntryLayout entry={entry} />

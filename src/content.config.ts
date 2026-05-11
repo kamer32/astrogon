@@ -87,7 +87,7 @@ const home = defineCollection({
 });
 
 const terms = defineCollection({
-  loader: glob({ pattern: "-index.{md,mdx}", base: "./src/content/terms" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/terms" }),
   schema: searchable,
 });
 

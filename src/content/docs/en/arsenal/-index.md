@@ -1,5 +1,5 @@
 ---
-title: "Weapons ve Modules"
+title: "Weapons and Modules"
 image: "@assets/docs/arsenal-cover.jpg"
 description: "Attack and defense units that enhance ship systems."
 ---
