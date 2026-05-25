@@ -4,7 +4,7 @@ imageAlt: Beat Taurus Official Logo
 title: Beat Taurus
 content: The Taurus Sector has fallen. As the pilot of the last surviving ship, maneuver through a relentless bullet hell, optimize your systems, and reclaim the sector. Not only your reflexes, but also your survival strategy will be put to the test.
 button:
-  label: Join the Android Closed Beta
+  label: Join the Community (Discord)
   link: "https://discord.gg/y9Um8GszCx" 
 ---
 

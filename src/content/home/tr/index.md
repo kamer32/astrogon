@@ -4,7 +4,7 @@ imageAlt: Beat Taurus Official Logo
 title: Beat Taurus
 content: Taurus Sektörü düştü. Hayatta kalan son geminin pilotu olarak amansız bir mermi cehenneminde (bullet-hell) manevra yap, sistemlerini optimize et ve sektörü geri al. Sadece reflekslerin değil, hayatta kalma stratejin de test edilecek.
 button:
-  label: Android Kapalı Beta'ya Katıl
+  label: Discord'a katıl
   link: "https://play.google.com/store/apps/dev?id=8997820170091293221&hl=en-US" 
 ---
 
