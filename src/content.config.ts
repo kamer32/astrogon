@@ -16,6 +16,7 @@ const social = z.object({
   instagram: z.string().optional(),
   linkedIn: z.string().optional(),
   youtube: z.string().optional(),
+  steam: z.string().optional(),
 });
 
 const about = defineCollection({

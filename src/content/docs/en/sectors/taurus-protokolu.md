@@ -5,19 +5,17 @@ image: "@assets/docs/taurus-hikaye-resmi.jpg"
 imageAlt: "Taurus High-Altitude Platforms"
 ---
 
-# Taurus Sector: Resistance Above the Clouds
+# The world is dying. Not slowly — but in agony
 
-When the **Taurus Constellation**, located light-years away from Earth, was chosen as humanity’s last refuge, no one could have predicted how deadly this system would become.
+Days grow darker, nights stretch into endless voids. Water is scarce and tainted. The last generation that remembers the old world is fading, while children are born into the grip of despair. Humanity’s time is running out; our only chance for survival is migration.
 
-## Toxic Ground and the Sea of Mist
-The surface of the Taurus planets is covered by a corrosive atmosphere known as the "Chromatic Mist," capable of dissolving even metallic alloys within seconds. Because of this, the surface world in the **Beat Taurus** universe is a graveyard. No one can descend to the ground, no one can touch the soil.
+## The Aurum Spore
+Scientists have engineered a mystical plant species within the Taurus Constellation capable of producing oxygen — the Aurum Spore. This plant holds the power to forge a breathable atmosphere on a barren exoplanet.
 
-## High-Altitude Platforms
-To survive, humanity constructed the **Sky-Link** platforms in the upper layers of the atmosphere, suspended by colossal gravity stabilizers.
-* **Living Zones:** Floating cities 30,000 feet above the sea of clouds.
-* **Fuel Stations:** Massive extractors drawing energy from the mist layer.
+## A new Earth is possible, but Taurus is not empty!
+Ancient beings, dormant for millions of years, have awakened to our arrival. They have stolen human technology, forging it into biomechanical weapons. And most dangerously: some of our own kind have joined them. 
 
-## Enemy Invasion: Void-Reapers
-These platforms must be defended not only against nature, but also against the swarms of **Void-Reapers**, native beings of Taurus that use the mist as their natural habitat. The enemies rise from below, emerging through the mist to attack.
+## Apostles of Ash
+The Aurum Spore, has fallen into the wrong hands. On the surface, a different threat looms. A cult known as the "Apostles of Ash" views the end of the world as divine retribution. Their leader is fanatical, their conviction absolute: humanity must perish in suffering for all souls to be saved. To them, those who attempt to migrate are the ultimate enemy. Against this tide stands the Taurus Alliance — a coalition of scientists, pilots, and survivors fighting the final battle to carry the human lineage into eternity.
 
-> **Pilot's Note:** "Your ship is your home, and your wings are your freedom. The moment you fall from the platform, you become nothing more than a brief glimmer within the mist."
+> **Pilot's Note:** "This is not just a war between good and evil; it is a fight for existence. Join the ranks of Taurus and save the future.

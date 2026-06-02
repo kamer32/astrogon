@@ -5,19 +5,17 @@ image: "@assets/docs/taurus-hikaye-resmi.jpg"
 imageAlt: "Taurus Yüksek İrtifa Platformları"
 ---
 
-# Taurus Sektörü: Bulutların Üstündeki Direniş
+# Dünya ölüyor. Yavaş değil — acı çekerek.
 
-Dünya'dan ışık yılı uzaklıktaki **Taurus Takım Yıldızı**, insanlığın son sığınağı olarak seçildiğinde kimse bu sistemin bu kadar ölümcül olacağını tahmin etmemişti. 
+Artık günler daha karanlık, geceler çok uzun. Su çok az ve kirli. Eski dünyayı hatırlayan son nesil yok olurken çocuklar umutsuzluğun içine doğuyor. İnsanlığın vakti sayılı; yaşam için tek şans göç. 
 
-## Zehirli Zemin ve Sis Denizi
-Taurus gezegenlerinin yüzeyi, "Kromatik Sis" adı verilen ve metalik alaşımları bile saniyeler içinde eriten korozif bir atmosferle kaplıdır. Bu yüzden **Beat Taurus** evreninde yeryüzü bir mezarlıktır. Kimse zemine inemez, kimse toprağa dokunamaz.
+## Aurum Spora
+Bilim insanları Taurus Takımyıldızı'ndaki bir gezegende oksijen üretebilen mistik bir bitki türü geliştirdi — Aurum Spora. Bu bitki, boş bir gezegende nefes alınabilir atmosfer yaratabilir. 
 
-## Yüksek İrtifa Platformları
-İnsanlık, hayatta kalabilmek için atmosferin üst katmanlarına, devasa yerçekimi dengeleyicilerle asılı tutulan **Sky-Link** platformlarını inşa etti. 
-* **Yaşam Alanları:** Bulut denizinin 30.000 fit üzerindeki asılı şehirler.
-* **Yakıt İstasyonları:** Sis katmanından enerji sağlayan devasa emiciler.
+## Yeni bir Dünya mümkün ama Taurus boş değil!
+Milyonlarca yıl önce o sistemde uyuyan kadim varlıklar insanlığın gelişiyle uyandı. İnsan teknolojisini çaldılar, biyomekanik silahlar ürettiler. Ve en tehlikilisi: Bazı insanlar onlarla iş birliği yaptı.
 
-## Düşman İstilası: Void-Reapers
-Bu platformlar sadece doğaya karşı değil, Taurus'un yerlisi olan ve sisi doğal bir yaşam alanı olarak kullanan **Void-Reapers** sürülerine karşı da savunulmak zorunda. Düşmanlar aşağıdan, sisin içinden yükselerek saldırıyor.
+## Külün Havarileri
+İnsanlığın son umudu Aurum Spora yanlış ellere geçti. Yeryüzünde farklı bir tehdit büyüyor. "Külün Havarileri" adlı bir tarikat, dünyanın sonunu tanrısal bir ceza olarak görüyor. Liderleri çılgın, inançları mutlak: İnsanlık bu acıyla ölmeli ki tüm ruhlar kurtulsun. Göç etmeye çalışanlar onların düşmanı. Buna karşı kurulan Taurus Birliği — bilim insanları, pilotlar, hayatta kalanlar — insan neslini sonsuza taşımak için son savaşı veriyor.
 
-> **Pilot Notu:** "Gemin senin evin, kanatların ise özgürlüğündür. Platformdan düştüğün an, sadece sisin içinde bir anlık parıltı olursun."
+> **Pilot Notu:** "Bu bir iyilerle kötüler savaşı.Taurus saflarına katıl ve geleceği kurtar.

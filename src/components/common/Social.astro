@@ -12,7 +12,8 @@ import {
   FaTiktok,
   FaGlobe,
   FaYoutube,
-} from "react-icons/fa";
+  FaSteam,
+} from "react-icons/fa6";
 
 interface Props {
   links?: SocialLinks;
@@ -137,6 +138,20 @@ const iconClass =
           >
             <span class="sr-only">TikTok</span>
             <FaTiktok className="w-6 h-6" />
+          </a>
+        </li>
+      )}
+      {links.steam && (
+        <li class={liClass}>
+          <a
+            class={iconClass}
+            aria-label="Steam"
+            href={links.steam}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            <span class="sr-only">Steam</span>
+            <FaSteam className="w-6 h-6" />
           </a>
         </li>
       )}

@@ -9,4 +9,5 @@ export type Social = {
   instagram?: string;
   linkedIn?: string;
   youtube?: string;
+  steam?: string;
 };
