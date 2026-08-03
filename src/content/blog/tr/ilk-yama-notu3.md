@@ -2,7 +2,7 @@
 title: "Beat Taurus - Siber Dönüşüm ve Sistem Güncellemeleri"
 description: "Cyberpunk tema revizyonu, doku çözünürlüğü artışı, boss savaşı optimizasyonları ve çevre varlıkları."
 date: 2026-07-29
-categories: ["Devlog", "Güncellemeler"]
+categories: ["Geliştirici Günlüğü", "Güncellemeler"]
 tags: ["Cyberpunk", "Optimizasyon", "Yama Notları", "Görsel Revizyon"]
 image: "@assets/blog/cyberpunk-overhaul.jpg"
 imageAlt: "Beat Taurus Cyberpunk Dönüşümü"
